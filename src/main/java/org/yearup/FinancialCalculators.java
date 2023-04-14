@@ -41,8 +41,35 @@ public class FinancialCalculators
         System.out.printf("Total interest paid: %.2f$\n",  totalInterest);
     }
 
+    public static void getFutureValue()
+    {
+        // Initial variables
+        double deposit;
+        double interestRate;
+        double numYears;
+
+        // Query user
+        System.out.print("Enter deposit amount: ");
+        deposit = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter interest rate: ");
+        interestRate = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter number of years: ");
+        numYears = scanner.nextDouble();
+        scanner.nextLine();
+
+        double futureValue = deposit * Math.pow(1 + (interestRate / 100), numYears);
+        double totalInterest = futureValue - deposit;
+
+        System.out.printf("Future value: %.2f$\n", futureValue);
+        System.out.printf("Total interest paid: %.2f$\n",  totalInterest);
+    }
+
     public static void main(String[] args)
     {
-        getMortgage();
+        getFutureValue();
     }
 }
