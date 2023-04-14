@@ -24,7 +24,7 @@ public class FinancialCalculators
         scanner.nextLine();
 
         System.out.print("Enter annual interest rate: ");
-        annualIR = scanner.nextDouble() / 100;
+        annualIR = scanner.nextDouble();
         scanner.nextLine();
 
         System.out.print("Enter number of years: ");
