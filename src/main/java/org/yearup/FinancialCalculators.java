@@ -68,8 +68,25 @@ public class FinancialCalculators
         System.out.printf("Total interest paid: %.2f$\n",  totalInterest);
     }
 
+    public static void displayMenu()
+    {
+        String option;
+        System.out.println("Pick an option:\n1 Mortgage Calculator\n2 Future Value");
+        System.out.print("Enter 1 or 2: ");
+        option = scanner.nextLine();
+
+        if (option.equalsIgnoreCase("1"))
+        {
+            getMortgage();
+        }
+        else if (option.equalsIgnoreCase("2"))
+        {
+            getFutureValue();
+        }
+    }
+
     public static void main(String[] args)
     {
-        getFutureValue();
+        displayMenu();
     }
 }
